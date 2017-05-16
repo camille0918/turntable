@@ -1,0 +1,529 @@
+@charset "utf-8";
+/* ================================ */
+
+/* CSS Document *//**
+ * 大转盘抽奖页面
+ * @Camille
+ * www.wordqu.com
+ * May-12-2017
+ **/
+/* ================================ */
+.wrap{
+	width: 1000px; 
+	margin: 0 auto;
+}
+.turntable{
+	width: 100%; 
+	overflow: hidden;
+}
+.turntable .turntable-begin{
+	width: 100%; 
+	height: 629px; 
+	background: url(../images/banner.jpg) no-repeat center;
+}
+.turntable-begin .turntable-main{
+	width: 990px; 
+	height: 629px; 
+	position: relative;
+}
+/*获奖名单 begin*/
+.turntable-begin .winner-area{
+	position: absolute; 
+	top: 75px; 
+	left: 60px; 
+	width: 312px; 
+	height: 414px; 
+	padding: 18px 14px 14px; 
+	border:1px solid #fff; 
+	border-radius: 10px; 
+	background-color: #fff;
+}
+.winner-area .winner-title{
+	position: relative; 
+	height: 40px; 
+	line-height: 40px; 
+	text-align: center;
+}
+.winner-area .title-bg{
+	position: absolute; 
+	top: 19px; 
+	left: 0; 
+	width: 100%;
+	border-top: 2px solid #ff6600;
+}
+.winner-area .title-content{
+	position: relative; 
+	display: inline-block; 
+	padding: 0 10px; 
+	font-size: 24px; 
+	background-color: #fff; 
+	color: #ff6600;
+}
+.winner-area .winner-title2{
+	overflow: hidden; 
+	line-height: 36px; 
+	margin: 10px 0;
+}
+.winner-area span{
+	float: left; 
+	width: 39%; 
+	padding: 0 5%; 
+	white-space: nowrap; 
+	overflow: hidden;
+}
+.winner-area .w-th{
+	font-size: 16px; 
+	color: #9d4e21;
+}
+.winner-area .winner-list{
+	position: relative; 
+	height: 311px; 
+	margin: 0 5px; 
+	overflow: hidden;
+}
+.winner-area .winner-list::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 40px;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+}
+.winner-area ul li{
+	line-height: 38px;
+	border-top: 1px dashed #d9d8d8;
+	overflow: hidden;
+}
+.winner-area .winner-list .no-border{
+	border: 0;
+}
+/*获奖名单 end*/
+
+/*活动说明*/
+.turntable .turntable-info{
+	width: 100%;
+	background-color: #d22a09;
+	overflow: hidden;
+}
+.turntable .turntable-info .text{
+	width: 870px;
+	padding-bottom: 30px;
+	margin: 0 auto;
+	line-height: 18px;
+	color: #fff;
+	overflow: hidden;
+}
+.turntable .turntable-info h3{
+	margin: 18px 0;
+	font-size: 20px;
+}
+.turntable .turntable-info p{
+	margin: 12px 0;
+	font-size: 16px;
+}
+
+/*大转盘*/
+.turntable-paly .roulette-chrome {
+    position: absolute;
+    top: 109px;
+    left: 496px;
+    width: 415px;
+    height: 415px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.turntable-paly .roulette-chrome .pan-bg {
+    position: relative;
+    margin: 8px;
+    width: 341px;
+    height: 341px;
+    border: 3px solid #ffbe04;
+    padding: 26px;
+    border-radius: 50%;
+    background-color: #ffbe04;
+}
+.turntable-paly .roulette-chrome .pan-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+.turntable-paly .csstransforms .cn-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+}
+.turntable-paly .cn-wrapper * {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+.turntable-paly .csstransforms .cn-wrapper li {
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    overflow: hidden;
+}
+.turntable-paly .csstransforms .cn-wrapper li div {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 150%;
+    width: 150%;
+    text-decoration: none;
+    text-align: center;
+}
+.turntable-paly .csstransforms .item-wrap8 li div {
+    top: 14%;
+    left: 9%;
+    padding-top: 195px;
+}
+.turntable-paly .csstransforms .cn-wrapper li img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 17px auto 0;
+}
+.turntable-paly .csstransforms .cn-wrapper li:nth-child(odd) div {
+    background-color: #fff1de;
+}
+.turntable-paly .csstransforms .cn-wrapper li:nth-child(even) div {
+    background-color: #fff5f5;
+}
+.turntable-paly .csstransforms .cn-wrapper li span {
+    font-size: 13px;
+    color: #ab6842;
+}
+.turntable-paly .csstransforms .item-wrap8 li img {
+    width: 40px;
+    height: 40px;
+}
+.turntable-paly .roulette-chrome .pan-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 332px;
+    height: 332px;
+    border: 5px solid #ff9000;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.turntable-paly .pan-list {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -10px;
+}
+.turntable-paly .pan-list li {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 10px;
+    height: 196.5px;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+.turntable-paly .pan-list li::before {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    content: "";
+    width: 8px;
+    height: 8px;
+    /*background-color: #fee8bb;
+    box-shadow: 0 4px 3px #d71c1c, 0 0 6px #fef64a, 0 0 2px #fef64a inset;*/
+    border:2px solid transparent;
+    border-radius: 50%;
+    z-index: 3;
+}
+.turntable-paly .pan-list li:nth-child(odd)::before {
+	background-color: #fff;
+}
+.turntable-paly .pan-list li:nth-child(even)::before {
+	background-color: transparent;
+	border:2px solid #f56403;
+}
+.turntable-paly .pan-list.animation li:nth-child(odd)::before {
+    -webkit-animation: lightShining 1s linear infinite;
+    animation: lightShining 1s infinite;
+}
+.turntable-paly .pan-list.animation li:nth-child(even)::before {
+    -webkit-animation: lightShining 1s linear .5s infinite;
+    animation: lightShining 1s linear .5s infinite;
+}
+.turntable-paly .pan-list li:nth-child(2) {
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+.turntable-paly .pan-list li:nth-child(3) {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+.turntable-paly .pan-list li:nth-child(4) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.turntable-paly .pan-list li:nth-child(5) {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+.turntable-paly .pan-list li:nth-child(6) {
+    -webkit-transform: rotate(75deg);
+    -moz-transform: rotate(75deg);
+    -ms-transform: rotate(75deg);
+    transform: rotate(75deg);
+}
+.turntable-paly .pan-list li:nth-child(7) {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.turntable-paly .pan-list li:nth-child(8) {
+    -webkit-transform: rotate(105deg);
+    -moz-transform: rotate(105deg);
+    -ms-transform: rotate(105deg);
+    transform: rotate(105deg);
+}
+.turntable-paly .pan-list li:nth-child(9) {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
+.turntable-paly .pan-list li:nth-child(10) {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+.turntable-paly .pan-list li:nth-child(11) {
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    -ms-transform: rotate(150deg);
+    transform: rotate(150deg);
+}
+.turntable-paly .pan-list li:nth-child(12) {
+    -webkit-transform: rotate(165deg);
+    -moz-transform: rotate(165deg);
+    -ms-transform: rotate(165deg);
+    transform: rotate(165deg);
+}
+.turntable-paly .pan-list li:nth-child(13) {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.turntable-paly .pan-list li:nth-child(14) {
+    -webkit-transform: rotate(195deg);
+    -moz-transform: rotate(195deg);
+    -ms-transform: rotate(195deg);
+    transform: rotate(195deg);
+}
+.turntable-paly .pan-list li:nth-child(15) {
+    -webkit-transform: rotate(210deg);
+    -moz-transform: rotate(210deg);
+    -ms-transform: rotate(210deg);
+    transform: rotate(210deg);
+}
+.turntable-paly .pan-list li:nth-child(16) {
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+.turntable-paly .pan-list li:nth-child(17) {
+    -webkit-transform: rotate(240deg);
+    -moz-transform: rotate(240deg);
+    -ms-transform: rotate(240deg);
+    transform: rotate(240deg);
+}
+.turntable-paly .pan-list li:nth-child(18) {
+    -webkit-transform: rotate(255deg);
+    -moz-transform: rotate(255deg);
+    -ms-transform: rotate(255deg);
+    transform: rotate(255deg);
+}
+.turntable-paly .pan-list li:nth-child(19) {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.turntable-paly .pan-list li:nth-child(20) {
+    -webkit-transform: rotate(285deg);
+    -moz-transform: rotate(285deg);
+    -ms-transform: rotate(285deg);
+    transform: rotate(285deg);
+}
+.turntable-paly .pan-list li:nth-child(21) {
+    -webkit-transform: rotate(300deg);
+    -moz-transform: rotate(300deg);
+    -ms-transform: rotate(300deg);
+    transform: rotate(300deg);
+}
+.turntable-paly .pan-list li:nth-child(22) {
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+.turntable-paly .pan-list li:nth-child(23) {
+    -webkit-transform: rotate(330deg);
+    -moz-transform: rotate(330deg);
+    -ms-transform: rotate(330deg);
+    transform: rotate(330deg);
+}
+.turntable-paly .pan-list li:nth-child(24) {
+    -webkit-transform: rotate(345deg);
+    -moz-transform: rotate(345deg);
+    -ms-transform: rotate(345deg);
+    transform: rotate(345deg);
+}
+/*开始按钮*/
+.turntable-paly .btn-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    width: 84px;
+    height: 84px;
+    margin-left: -42px;
+    margin-top: -42px;
+    cursor: pointer;
+}
+.turntable-paly .go-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin-left: -42px;
+    margin-top: -42px;
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -moz-transition: transform 8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -webkit-transition: transform 8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: transform 8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.turntable-paly .go-arrow::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 28px;
+    width: 28px;
+    height: 89px;
+    background: url(../images/pointer1.png) no-repeat;
+}
+.turntable-paly .btn-go-bg {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0,0,0,.56);
+}
+.turntable-paly .btn-go-bg::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+}
+.turntable-paly .tm {
+    position: relative;    
+    z-index: 4;
+    width: 68px;
+    height: 66px;
+    margin: 1px 0 0 1px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    box-shadow: 1px 2px 2px rgba(255,253,242,.4) inset;
+    text-shadow: 0 2px 2px #d71c1c;
+    border-radius: 50%;
+}
+.turntable-paly .btn-go {
+    position: relative;
+    width: 68px;
+    height: 66px;
+    margin: 1px 0 0 1px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff6600;
+    box-shadow: 1px 2px 2px rgba(255,253,242,.4) inset;
+    text-shadow: 0 2px 2px #d71c1c;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -34px;
+    margin-left: -34px;
+    z-index: 2;
+}
+.turntable-paly .animate-assist {
+    display: none;
+}
+
+
+.turntable-paly .draw-times {
+    position: absolute;
+    top: 550px;
+    left: 600px;
+    height: 36px;
+    font-size: 20px;
+    color: #9d4e21;
+}
+.turntable-paly .draw-times .page-wrap {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    margin: 0 5px;
+    min-width: 32px;
+    vertical-align: middle;
+    line-height: 30px;
+    font-size: 24px;
+    color: #f34c49;
+    background-color: #ddd;
+    text-align: center;
+    overflow: hidden;
+}
